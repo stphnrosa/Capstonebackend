@@ -1,7 +1,8 @@
 import {config} from 'dotenv'; config(); //invoking  this immediately to use the environment variables
 import mongoose from 'mongoose';
 
-mongoose.connect(process.env.MONGO_URI) //
+
+mongoose.connect(process.env.MONGO_URI) 
 
 
 Mongoose.connection.once('open', () => {
