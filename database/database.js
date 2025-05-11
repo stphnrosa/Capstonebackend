@@ -1,4 +1,4 @@
-import {config} from 'dotenv'; config(); //invoking  this immediately to use the environment variables
+import {config} from 'dotenv'; config(); //invoking this immediately to use the environment variables
 import mongoose from 'mongoose';
 
 
