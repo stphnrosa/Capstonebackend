@@ -65,8 +65,8 @@ const createdAssessment = await Assessment.create(req.body);
 
 async function getAssessment(req,res) {
     try {
-    const assessment= await Assessment.FindById(req.params.id);
-    res.status(200).json(assessment)
+    const assessment= await Assessment.findById(req.params.id);
+    res.status(200).json(assessment);
     } catch (error) {
         res.status(400).json ({error: error.message});
     }
@@ -78,5 +78,6 @@ export {
   getAssessments,
   deleteAssessment,
   updateAssessment,
-  getAssessment,
+  createAssessment,
+  getAssessment
 };
