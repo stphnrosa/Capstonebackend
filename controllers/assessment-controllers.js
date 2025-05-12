@@ -54,10 +54,19 @@ async function updateAssessment(req, res) {
   }
 }
 
+async function createAssessment(req,res) {
+ try {
+const createdAssessment = await Assessment.create(req.body);
+ res.status(201).json(createdAssessment)
+ } catch (error) {
+    res.status(400).json ({ error: error.message});
+ }
+}
+
 export {
   seedAssessment,
   getAssessment,
   deleteAssessment,
   updateAssessment,
-  // createAssessment,
+  createAssessment,
 };

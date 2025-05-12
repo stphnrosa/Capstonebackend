@@ -15,7 +15,7 @@ router.delete('/:id', assessmentController.deleteAssessment );
 router.put('/:id',assessmentController.updateAssessment );
 
 // //create
-// router.post('/', assessmentController.createAssessment );
+router.post('/', assessmentController.createAssessment );
 
 // //Show. id route parameter to find the specific assessment they are looking for. Maybe test result 1.
 // router.get('/:id', assessmentController.getAssessment );
