@@ -1,8 +1,8 @@
-// import Note from '../models/note-model.js';
+import Assessment from '../models/assessmentModel.js';
 
-// async function seedNotes(req, res) {
+// async function seedAssessment(req, res) {
 //     try{
-//         await Note.deleteMany({});
+//         await Assessment.deleteMany({});
 //         await Note.create({});
 //         {
 //             title:'',
