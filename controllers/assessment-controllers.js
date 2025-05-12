@@ -41,17 +41,23 @@ async function deleteAssessment(req, res) {
   }
 }
 
-// async function updateNote(req,res) {
-//     try{
-// const updatedNote= await Note.findByIdAndUpdate(req.params.id);
-// res.status(200).json(updatedNote);
-// } catch (error) {
-// res.status(400).json ({error: error.message});
-// }
+async function updateAssessment(req, res) {
+  try {
+    const updatedAssessment = await Assessment.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    ); // This third argument, the object and key {new: true} demonstrates the updated document, not the original.
+    res.status(200).json(updatedAssessment);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+}
+
 export {
   seedAssessment,
   getAssessment,
   deleteAssessment,
-  // updateAssessment,
+  updateAssessment,
   // createAssessment,
 };
