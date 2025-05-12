@@ -5,6 +5,6 @@ import mongoose from 'mongoose';
 mongoose.connect(process.env.MONGO_URI) // Process.env.MONGO_URI is being passed as the argument in this. This variable holds the mongoose connection string
 
 //Once this connection is open, we will execute this callback function. thi CB function is going to say "Connected to Database"
-Mongoose.connection.once('open', () => {
+mongoose.connection.once('open', () => {
     console.log(`conncted to Database: ${mongoose.connection.name}`);
 });
