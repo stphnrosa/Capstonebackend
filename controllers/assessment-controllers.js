@@ -31,18 +31,19 @@ async function getAssessment(req, res) {
     res.status(400).json({ error: error.message });
   }
 }
-//  async function deleteNote(req,res)
-// {
-//     const deletedNote= await Note.findByIdAndDelete(req.params.id);
-//     res.status(200).json(deletedNote);
-// } catch (error) {
-//     res.srarus(400).json ({error: error.message});
-// }
-// }
+
+async function deleteAssessment(req, res) {
+  try {
+    const deletedAssessment = await Assessment.findByIdAndDelete(req.params.id);
+    res.status(200).json(deletedAssessment);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+}
 
 // async function updateNote(req,res) {
 //     try{
-// const updateddNote= await Note.findByIdAndUpdate(req.params.id);
+// const updatedNote= await Note.findByIdAndUpdate(req.params.id);
 // res.status(200).json(updatedNote);
 // } catch (error) {
 // res.status(400).json ({error: error.message});
@@ -50,7 +51,7 @@ async function getAssessment(req, res) {
 export {
   seedAssessment,
   getAssessment,
-  // deleteAssessment,
+  deleteAssessment,
   // updateAssessment,
   // createAssessment,
 };

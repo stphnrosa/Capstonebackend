@@ -9,10 +9,10 @@ router.get('/seed', assessmentController.seedAssessment );
 router.get('/', assessmentController.getAssessment );
 
 // //delete. Needs an id to determine what specifically needs to be deleted. // MIGHT DELETE THIS ROUTE?! I don't want people to delete their assessment results. Might use this ONLY for deleting User account instead.
-// router.delete('/:id', assessmentController.deleteAssessment );
+router.delete('/:id', assessmentController.deleteAssessment );
 
 // //update. Needs an id to determine what needs to be updated. 
-// router.put('/:id',assessmentController.updateAssessment );
+router.put('/:id',assessmentController.updateAssessment );
 
 // //create
 // router.post('/', assessmentController.createAssessment );
