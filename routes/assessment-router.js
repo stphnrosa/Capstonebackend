@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/seed', assessmentController.seedAssessment );
 
 // //index (main page). 
-router.get('/', assessmentController.getAssessment );
+router.get('/', assessmentController.getAssessments );
 
 // //delete. Needs an id to determine what specifically needs to be deleted. // MIGHT DELETE THIS ROUTE?! I don't want people to delete their assessment results. Might use this ONLY for deleting User account instead.
 router.delete('/:id', assessmentController.deleteAssessment );
@@ -18,6 +18,6 @@ router.put('/:id',assessmentController.updateAssessment );
 router.post('/', assessmentController.createAssessment );
 
 // //Show. id route parameter to find the specific assessment they are looking for. Maybe test result 1.
-// router.get('/:id', assessmentController.getAssessment );
+router.get('/:id', assessmentController.getAssessment );
 
 export default router;

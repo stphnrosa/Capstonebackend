@@ -23,7 +23,7 @@ async function seedAssessment(req, res) {
   }
 }
 
-async function getAssessment(req, res) {
+async function getAssessments(req, res) {
   try {
     const assessment = await Assessment.find({});
     res.status(200).json(assessment);
@@ -63,10 +63,20 @@ const createdAssessment = await Assessment.create(req.body);
  }
 }
 
+async function getAssessment(req,res) {
+    try {
+    const assessment= await Assessment.FindById(req.params.id);
+    res.status(200).json(assessment)
+    } catch (error) {
+        res.status(400).json ({error: error.message});
+    }
+}
+
+
 export {
   seedAssessment,
-  getAssessment,
+  getAssessments,
   deleteAssessment,
   updateAssessment,
-  createAssessment,
+  getAssessment,
 };
