@@ -5,7 +5,7 @@ async function seedAssessment(req, res) {
     await Assessment.deleteMany({});
     await Assessment.create(
       {
-        title: "Title 1",
+        title: "Baseline",
         body: "Body 1",
       },
       {

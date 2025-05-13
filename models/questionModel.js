@@ -1,8 +1,9 @@
+// reference: https://www.geeksforgeeks.org/quiz-app-using-mern-stack/
 import mongoose from 'mongoose'; // need monogoose to createschema
 
 const QuestionsSchema = new mongoose.Schema ({
-    title: {type:String, require: true },
-    body: {type: String}
+    questions: {type: Array, default: [] }, 
+    answers: {type: Array, default: [] }
 }, {
     timestamps: true // this automatically creates a created app field and an updated app field
 });
