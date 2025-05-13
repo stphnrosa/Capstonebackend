@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'; // need monogoose to createschema
 
 const assessmentSchema = new mongoose.Schema ({
-    title: {type:String, require: true },
+    title: {type: String, require: true },
     body: {type: String}
 }, {
     timestamps: true // this automatically creates a created app field and an updated app field

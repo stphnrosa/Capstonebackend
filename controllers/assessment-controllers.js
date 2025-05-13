@@ -1,4 +1,7 @@
 import Assessment from "../models/assessmentModel.js";
+import Questions from "../models/questionModel.js";
+import Results from "../models/resultModel.js";
+import Questions, { answers } from '../database/database.js'
 
 async function seedAssessment(req, res) {
   try {
